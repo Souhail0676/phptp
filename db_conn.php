@@ -1,13 +1,14 @@
 <?php
 
-$sname= "blqomszo0ekvtxstlyhg-mysql.services.clever-cloud.com";
-$unmae= "uxrzu3kym2ugznft";
-$password = "5i3TDz1DsX4YoQ8Z7Kaz";
+$sname = "localhost";   // Server name or IP address where the MySQL server is running
+$uname = "root";        // MySQL username
+$password = "";         // MySQL password
+$db_name = "tp3php";    // Database name
 
-$db_name = "blqomszo0ekvtxstlyhg";
+// Attempt to establish a connection to the MySQL server
+$conn = mysqli_connect($sname, $uname, $password, $db_name);
 
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
-
+// Check if the connection was successful
 if (!$conn) {
-	echo "Connection failed!";
+    echo "Connection failed!";
 }
